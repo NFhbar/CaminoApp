@@ -11,7 +11,7 @@ exports[`should render ItemListItem correctly 1`] = `
     </h3>
   </Link>
   <p>
-    500
+    $5.00
      - 
     0
   </p>
