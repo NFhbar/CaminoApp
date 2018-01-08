@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EditItemPage 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-sm-12"
+  >
+    <ItemForm
+      item={
+        Object {
+          "amount": 1500,
+          "createdAt": 345600000,
+          "description": "Coat",
+          "id": "3",
+          "note": "",
+        }
+      }
+      onSubmit={[Function]}
+    />
+    <button
+      onClick={[Function]}
+    >
+      Remove
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AddItemPage correctly 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-sm-12"
+  >
+    <h1>
+      Add Item
+    </h1>
+    <ItemForm
+      onSubmit={[Function]}
+    />
+  </div>
+</div>
+`;
