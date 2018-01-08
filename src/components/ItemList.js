@@ -4,17 +4,17 @@ import ItemListItem from './ItemListItem';
 import selectItems from '../selectors/items';
 
 export const ItemList = (props) => (
-  <div>
+  <li className="list-group-item">
     {
       props.items.length === 0 ? (
-        <p>No Items</p>
+        <div className="alert alert-primary" role="alert">Add some items to get started!</div>
       ) : (
         props.items.map((item) => {
           return <ItemListItem key={item.id} {...item}/>
         })
       )
     }
-  </div>
+   </li>
 );
 
 const mapStateToProps = (state) => {

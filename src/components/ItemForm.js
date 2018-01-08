@@ -1,6 +1,4 @@
 import React from 'react';
-import moment from 'moment';
-import { SingleDatePicker } from 'react-dates';
 import { alert, button } from 'reactstrap';
 
 export default class ItemForm extends React.Component {
@@ -11,8 +9,6 @@ export default class ItemForm extends React.Component {
       description: props.item ? props.item.description : '',
       note: props.item ? props.item.note : '',
       amount: props.item ? (props.item.amount /100).toString() : '',
-      createdAt: props.item ? moment(props.item.createdAt): moment(),
-      calendarFocused: false,
       error: ''
     };
   }
@@ -31,14 +27,7 @@ export default class ItemForm extends React.Component {
       this.setState(() => ({ amount }));
     }
   };
-  onDateChange = (createdAt) => {
-    if (createdAt) {
-      this.setState(() => ({ createdAt }));
-    }
-  };
-  onFocusChange = ({ focused }) => {
-    this.setState(() => ({calendarFocused: focused}));
-  };
+
   onSubmit = (e) => {
     e.preventDefault();
     if (!this.state.description || !this.state.amount) {
@@ -48,7 +37,6 @@ export default class ItemForm extends React.Component {
       this.props.onSubmit({
         description: this.state.description,
         amount: parseFloat(this.state.amount, 10)*100,
-        createdAt: this.state.createdAt.valueOf(),
         note: this.state.note
       });
     }
@@ -68,33 +56,35 @@ export default class ItemForm extends React.Component {
           </div>
         }
         <form onSubmit={this.onSubmit}>
-          <input
-            type="text"
-            placeholder="Description"
-            autoFocus
-            value={this.state.description}
-            onChange={this.onDescriptionChange}
-          />
-          <input
-            type="text"
-            placeholder="Amount"
-            value={this.state.amount}
-            onChange={this.onAmountChange}
-          />
-          <SingleDatePicker
-            date={this.state.createdAt}
-            onDateChange={this.onDateChange}
-            focused={this.state.calendarFocused}
-            onFocusChange={this.onFocusChange}
-            numberOfMonths={1}
-          />
-          <textarea
-            placeholder="Add a note for your item (optional)"
-            value={this.state.note}
-            onChange={this.onNoteChange}
-          >
-          </textarea>
-          <button>Edit Item</button>
+          <div className="form-group">
+            <input
+              type="text"
+              placeholder="Description"
+              autoFocus
+              value={this.state.description}
+              onChange={this.onDescriptionChange}
+              className="form-control"
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="text"
+              placeholder="Amount"
+              value={this.state.amount}
+              onChange={this.onAmountChange}
+              className="form-control"
+              />
+          </div>
+          <div className="form-group">
+            <textarea
+              placeholder="Add a note for your item (optional)"
+              value={this.state.note}
+              onChange={this.onNoteChange}
+              className="form-control"
+              >
+            </textarea>
+          </div>
+          <button type="submit" className="btn btn-lg btn-primary">Submit Item</button>
         </form>
       </div>
     )

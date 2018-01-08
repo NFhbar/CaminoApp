@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import moment from 'moment';
 import ItemForm from '../../components/ItemForm';
 import items from '../fixtures/items';
 
@@ -70,21 +69,6 @@ test('should call onSubmit prop for valid form submission', () => {
   expect(onSubmitSpy).toHaveBeenLastCalledWith({
     description: items[0].description,
     amount: items[0].amount,
-    note: items[0].note,
-    createdAt: items[0].createdAt
+    note: items[0].note
   });
-});
-
-test('should set new date on date change', () => {
-  const now = moment();
-  const wrapper = shallow(<ItemForm />);
-  wrapper.find('SingleDatePicker').prop('onDateChange')(now);
-  expect(wrapper.state('createdAt')).toEqual(now);
-});
-
-test('should set calendar focus on change', () => {
-  const focused = true;
-  const wrapper = shallow(<ItemForm />);
-  wrapper.find('SingleDatePicker').prop('onFocusChange')({ focused });
-  expect(wrapper.state('calendarFocused')).toBe(focused);
 });

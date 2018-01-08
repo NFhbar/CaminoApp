@@ -1,20 +1,14 @@
-import moment from 'moment';
-
 // Get visible items
-
-export default (items, { text, sortBy, startDate, endDate}) => {
+export default (items, {text, sortBy}) => {
   return items.filter((item) => {
-    const createdAtMoment = moment(item.createdAt);
-    const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment,'day'): true ;
-    const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day'): true;
     const textMatch = item.description.toLowerCase().includes(text.toLowerCase());
 
-    return startDateMatch && endDateMatch && textMatch;
+    return textMatch;
   }).sort((a, b) => {
-    if(sortBy === 'date') {
-      return a.createdAt < b.createdAt ? 1 : -1;
-    } else if (sortBy === 'amount') {
+    if (sortBy === 'amount') {
       return a.amount < b.amount ? 1: -1;
+    } else if (sortBy === 'sales') {
+      return a.sales < b.sales ? 1: -1;
     }
   });
 };

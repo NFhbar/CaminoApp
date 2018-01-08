@@ -2,18 +2,35 @@
 
 exports[`should render NotFoundPage correctly 1`] = `
 <div
-  className="row"
+  className="row card-body"
 >
   <div
     className="col-sm-12"
   >
-    404 - 
-    <Link
-      replace={false}
-      to="/"
+    <div
+      className="alert alert-danger"
+      role="alert"
     >
-      Go Home
-    </Link>
+      <h4
+        className="alert-heading"
+      >
+        404 - Oops!
+      </h4>
+      <p>
+        Looks like you took a wrong turn, no worries.
+      </p>
+      <p
+        className="mb-0"
+      >
+          
+        <Link
+          replace={false}
+          to="/"
+        >
+          Go Home
+        </Link>
+      </p>
+    </div>
   </div>
 </div>
 `;

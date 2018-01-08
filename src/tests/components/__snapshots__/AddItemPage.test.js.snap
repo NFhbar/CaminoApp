@@ -2,14 +2,14 @@
 
 exports[`should render AddItemPage correctly 1`] = `
 <div
-  className="row"
+  className="row card-body"
 >
   <div
     className="col-sm-12"
   >
-    <h1>
-      Add Item
-    </h1>
+    <h3>
+      Add an item to your store!
+    </h3>
     <ItemForm
       onSubmit={[Function]}
     />

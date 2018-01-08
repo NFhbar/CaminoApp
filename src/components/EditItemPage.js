@@ -15,13 +15,13 @@ export class EditItemPage extends React.Component {
   };
   render() {
     return (
-      <div className="row">
+      <div className="row" id="edit-item-page">
         <div className="col-sm-12">
           <ItemForm
             item={this.props.item}
             onSubmit={this.onSubmit}
           />
-          <button onClick={this.onRemove}>Remove</button>
+          <button type="submit" id="btn-remove" className="btn btn-md btn-danger" onClick={this.onRemove}>Remove Item</button>
         </div>
       </div>
     );

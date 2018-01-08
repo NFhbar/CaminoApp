@@ -2,13 +2,41 @@
 
 exports[`should render DashboardPage correctly 1`] = `
 <div
-  className="row"
+  className="row card-body"
 >
   <div
     className="col-sm-12"
   >
     <Connect(ItemListFilters) />
-    <Connect(ItemList) />
+    <ul
+      className="list-group"
+    >
+      <li
+        className="list-group-item disabled"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-sm-4"
+          >
+            Item
+          </div>
+          <div
+            className="col-sm-4"
+          >
+            Price
+          </div>
+          <div
+            className="col-sm-4"
+          >
+            Items sold
+          </div>
+        </div>
+      </li>
+      <Connect(ItemList) />
+    </ul>
+    <ItemPlot />
   </div>
 </div>
 `;

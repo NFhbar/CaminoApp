@@ -1,21 +1,17 @@
-import moment from 'moment';
 
 export default [{
   id: '1',
   description: 'Pant',
   note: '',
-  amount: 500,
-  createdAt: 0
+  amount: 500
 }, {
   id: '2',
   description: 'Shirt',
   note: '',
-  amount: 1000,
-  createdAt: moment(0).subtract(4,'days').valueOf()
+  amount: 1000
 }, {
   id: '3',
   description: 'Coat',
   note: '',
-  amount: 1500,
-  createdAt: moment(0).add(4,'days').valueOf()
+  amount: 1500
 }];

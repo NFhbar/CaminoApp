@@ -23,7 +23,6 @@ test('should setup add item action object with provided value', () => {
   const itemData = {
     description: 'Hat',
     amount: 109500,
-    createdAt: 1000,
     note: 'This was an item added'
   };
   const action = addItem(itemData);
@@ -31,7 +30,8 @@ test('should setup add item action object with provided value', () => {
     type: 'ADD_ITEM',
     item: {
       ...itemData,
-      id: expect.any(String)
+      id: expect.any(String),
+      sales: expect.any(Number)
     }
   });
 });
@@ -45,7 +45,7 @@ test('should setup add item action object with default value', () => {
       description: '',
       note: '',
       amount: 0,
-      createdAt: 0
+      sales: expect.any(Number)
     }
   });
 });

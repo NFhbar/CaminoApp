@@ -3,6 +3,7 @@
 exports[`should render EditItemPage 1`] = `
 <div
   className="row"
+  id="edit-item-page"
 >
   <div
     className="col-sm-12"
@@ -11,7 +12,6 @@ exports[`should render EditItemPage 1`] = `
       item={
         Object {
           "amount": 1500,
-          "createdAt": 345600000,
           "description": "Coat",
           "id": "3",
           "note": "",
@@ -20,9 +20,12 @@ exports[`should render EditItemPage 1`] = `
       onSubmit={[Function]}
     />
     <button
+      className="btn btn-md btn-danger"
+      id="btn-remove"
       onClick={[Function]}
+      type="submit"
     >
-      Remove
+      Remove Item
     </button>
   </div>
 </div>

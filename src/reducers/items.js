@@ -1,5 +1,4 @@
 // Items Reducer
-
 const itemsReducerDefaultState = [];
 
 export default (state = itemsReducerDefaultState, action) => {

@@ -2,36 +2,58 @@
 
 exports[`should render Header 1`] = `
 <div
-  className="row"
+  className="row card-header"
 >
   <div
     className="col-sm-12"
   >
-    <h1>
-      CaminoApp
+    <h1
+      className="card-title"
+      id="header-title"
+    >
+      Camino Financial React App
     </h1>
-    <NavLink
-      activeClassName="is-active"
-      ariaCurrent="true"
-      exact={true}
-      to="/"
+    <div
+      className="row"
     >
-      Dashboard
-    </NavLink>
-    <NavLink
-      activeClassName="is-active"
-      ariaCurrent="true"
-      to="/create"
-    >
-      Create Item
-    </NavLink>
-    <NavLink
-      activeClassName="is-active"
-      ariaCurrent="true"
-      to="/about"
-    >
-      About
-    </NavLink>
+      <div
+        className="col-md-4"
+      >
+        <NavLink
+          activeClassName="is-active"
+          ariaCurrent="true"
+          className="btn btn-primary"
+          exact={true}
+          to="/"
+        >
+          Dashboard
+        </NavLink>
+      </div>
+      <div
+        className="col-md-4"
+      >
+        <NavLink
+          activeClassName="is-active"
+          ariaCurrent="true"
+          className="btn btn-primary"
+          to="/create"
+        >
+          Add Item
+        </NavLink>
+      </div>
+      <div
+        className="col-md-4"
+      >
+        <NavLink
+          activeClassName="is-active"
+          ariaCurrent="true"
+          className="btn btn-primary"
+          to="/about"
+        >
+          About
+        </NavLink>
+      </div>
+    </div>
   </div>
 </div>
 `;

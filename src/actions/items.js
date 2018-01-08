@@ -5,8 +5,7 @@ export const addItem = (
   {
     description = '',
     note = '',
-    amount = 0,
-    createdAt = 0
+    amount = 0
   } = {}
 ) => ({
   type: 'ADD_ITEM',
@@ -15,7 +14,7 @@ export const addItem = (
     description,
     note,
     amount,
-    createdAt
+    sales: Math.floor(Math.random()*Math.floor(100)),
   }
 });
 

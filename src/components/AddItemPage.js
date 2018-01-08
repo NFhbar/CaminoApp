@@ -11,9 +11,9 @@ export class AddItemPage extends React.Component {
   };
   render() {
     return (
-      <div className="row">
+      <div className="row card-body">
         <div className="col-sm-12">
-          <h1>Add Item</h1>
+          <h3>Add an item to your store!</h3>
           <ItemForm
             onSubmit={this.onSubmit}
           />
