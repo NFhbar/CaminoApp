@@ -11,16 +11,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
-
 const store = configureStore();
-
-store.dispatch(addItem({description: 'long shirt', amount: 4500}));
-store.dispatch(addItem({description: 'short shirt', createdAt: 1000}));
-store.dispatch(addItem({description: 'Pants', amount: 109500}));
-
-const state = store.getState();
-const visibleItems = getVisibleItems(state.items, state.filters);
-console.log(visibleItems);
 
 const jsx = (
   <Provider store={store}>
