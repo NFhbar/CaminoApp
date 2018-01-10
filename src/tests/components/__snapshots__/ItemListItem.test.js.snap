@@ -23,6 +23,8 @@ exports[`should render ItemListItem correctly 1`] = `
   </div>
   <div
     className="col-sm-4"
-  />
+  >
+    10
+  </div>
 </div>
 `;

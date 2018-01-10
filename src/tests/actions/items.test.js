@@ -31,7 +31,10 @@ test('should setup add item action object with provided value', () => {
     item: {
       ...itemData,
       id: expect.any(String),
-      sales: expect.any(Number)
+      sales: expect.any(Number),
+      sales2: expect.any(Number),
+      sales3: expect.any(Number),
+      sales4: expect.any(Number)
     }
   });
 });
@@ -45,7 +48,10 @@ test('should setup add item action object with default value', () => {
       description: '',
       note: '',
       amount: 0,
-      sales: expect.any(Number)
+      sales: expect.any(Number),
+      sales2: expect.any(Number),
+      sales3: expect.any(Number),
+      sales4: expect.any(Number)
     }
   });
 });

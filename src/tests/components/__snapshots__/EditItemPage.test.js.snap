@@ -15,6 +15,10 @@ exports[`should render EditItemPage 1`] = `
           "description": "Coat",
           "id": "3",
           "note": "",
+          "sales": 5,
+          "sales2": 10,
+          "sales3": 15,
+          "sales4": 20,
         }
       }
       onSubmit={[Function]}

@@ -14,9 +14,8 @@ const AboutPage = () => (
         <hr className="my-4"/>
         <p>The App is built with React, Redux, Bootstrap, and Chartjs. It is deployed using Heroku. It mimics some
         of the behavior of a store App in which the admin can add items to sell at a
-        given price. Added items are randomly generated a sold amount for displaying purposes. Items can be sorted by price or amount sold.
-        The items are then rendered dynamically to the page. The charts are statics
-        since no real sales data is present.</p>
+        given price. Added items are randomly generated sold amounts for 4 months for displaying purposes. Items can be sorted by price or amount sold.
+        The items are then rendered dynamically to the page.</p>
         <p className="lead">
           <a className="btn btn-primary btn-lg" href="https://github.com/NFhbar/CaminoApp" role="button">View github</a>
         </p>

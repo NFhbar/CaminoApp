@@ -15,6 +15,9 @@ export const addItem = (
     note,
     amount,
     sales: Math.floor(Math.random()*Math.floor(100)),
+    sales2: Math.floor(Math.random()*Math.floor(100)),
+    sales3: Math.floor(Math.random()*Math.floor(100)),
+    sales4: Math.floor(Math.random()*Math.floor(100))
   }
 });
 

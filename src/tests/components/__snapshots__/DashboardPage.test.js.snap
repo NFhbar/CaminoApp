@@ -36,7 +36,7 @@ exports[`should render DashboardPage correctly 1`] = `
       </li>
       <Connect(ItemList) />
     </ul>
-    <ItemPlot />
+    <Connect(ItemPlot) />
   </div>
 </div>
 `;
