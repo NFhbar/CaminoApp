@@ -7,7 +7,7 @@ const ItemPlotItem = ({plots}) => {
   const labels = { labels: ['January', 'February', 'March', 'April'] };
   const data = { datasets: plotDataFormat(plots)};
   var array = {...labels, ...data};
-
+  
   return (
     <div id="Plot">
       <h2>Monthly Sales</h2>

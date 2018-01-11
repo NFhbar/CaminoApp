@@ -1,4 +1,10 @@
-import { addItem, editItem, removeItem } from '../../actions/items';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import { startAddItem, addItem, editItem, removeItem } from '../../actions/items';
+import items from '../fixtures/items';
+import database from '../../firebase/firebase';
+
+const createMockStore = configureMockStore([thunk]);
 
 test('should setup remove item action object', () => {
   const action = removeItem({ id: '123abc' });
@@ -20,38 +26,66 @@ test('should setup edit item action object', () => {
 });
 
 test('should setup add item action object with provided value', () => {
-  const itemData = {
-    description: 'Hat',
-    amount: 109500,
-    note: 'This was an item added'
-  };
-  const action = addItem(itemData);
+  const action = addItem(items[2]);
   expect (action).toEqual({
     type: 'ADD_ITEM',
-    item: {
-      ...itemData,
-      id: expect.any(String),
-      sales: expect.any(Number),
-      sales2: expect.any(Number),
-      sales3: expect.any(Number),
-      sales4: expect.any(Number)
-    }
+    item: items[2]
   });
 });
 
-test('should setup add item action object with default value', () => {
-  const action = addItem();
-  expect(action).toEqual({
-    type: 'ADD_ITEM',
-    item: {
-      id: expect.any(String),
-      description: '',
-      note: '',
-      amount: 0,
-      sales: expect.any(Number),
-      sales2: expect.any(Number),
-      sales3: expect.any(Number),
-      sales4: expect.any(Number)
-    }
+test('should add item to database and store', (done) => {
+  const store = createMockStore({});
+  const itemData = {
+    description: 'Pants',
+    note: 'nice pant',
+    amount: 3000,
+    sales: 1,
+    sales2: 2,
+    sales3: 3,
+    sales4: 4
+  };
+
+  store.dispatch(startAddItem(itemData)).then(() => {
+    const actions = store.getActions();
+    expect(actions[0]).toEqual({
+      type: 'ADD_ITEM',
+      item: {
+        id: expect.any(String),
+        ...itemData
+      }
+    });
+    return database.ref(`items/${actions[0].item.id}`).once('value');
+  }).then((snapshot) => {
+    expect(snapshot.val()).toEqual(itemData);
+    done();
+  });
+});
+
+
+test('should add item with defaults to database and store', (done) => {
+  const store = createMockStore({});
+  const itemDataDefaults = {
+    description: '',
+    note: '',
+    amount: 0,
+    sales: expect.any(Number),
+    sales2: expect.any(Number),
+    sales3: expect.any(Number),
+    sales4: expect.any(Number)
+  };
+
+  store.dispatch(startAddItem({})).then(() => {
+    const actions = store.getActions();
+    expect(actions[0]).toEqual({
+      type: 'ADD_ITEM',
+      item: {
+        id: expect.any(String),
+        ...itemDataDefaults
+      }
+    });
+    return database.ref(`items/${actions[0].item.id}`).once('value');
+  }).then((snapshot) => {
+    expect(snapshot.val()).toEqual(itemDataDefaults);
+    done();
   });
 });

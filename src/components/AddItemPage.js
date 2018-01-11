@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { row, column } from 'reactstrap';
 import ItemForm from './ItemForm'
-import { addItem } from '../actions/items';
+import { startAddItem } from '../actions/items';
 
 export class AddItemPage extends React.Component {
   onSubmit = (item) => {
-    this.props.addItem(item);
+    this.props.startAddItem(item);
     this.props.history.push('/');
   };
   render() {
@@ -24,7 +24,7 @@ export class AddItemPage extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  addItem: (item) => dispatch(addItem(item))
+  startAddItem: (item) => dispatch(startAddItem(item))
 });
 
 export default connect(undefined, mapDispatchToProps)(AddItemPage);
