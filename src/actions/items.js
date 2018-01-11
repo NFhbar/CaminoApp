@@ -35,6 +35,15 @@ export const removeItem = ({ id } = {}) => ({
   id
 });
 
+// ASCYN ACTION
+export const startRemoveItem = ({ id } = {}) => {
+  return (dispatch) => {
+    return database.ref(`items/${id}`).remove().then(() =>{
+      dispatch(removeItem({ id }));
+    });
+  };
+};
+
 // EDIT_ITEM
 export const editItem = (id, updates) => ({
   type: 'EDIT_ITEM',
@@ -48,6 +57,7 @@ export const setItems = (items) => ({
   items
 });
 
+// ASCYN ACTION
 export const startSetItems = () => {
   return (dispatch) => {
     return database.ref('items').once('value').then((snapshot) => {

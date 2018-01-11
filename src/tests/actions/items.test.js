@@ -1,6 +1,13 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { startAddItem, addItem, editItem, removeItem, setItems, startSetItems } from '../../actions/items';
+import {
+  startAddItem,
+  addItem,
+  editItem,
+  removeItem,
+  startRemoveItem,
+  setItems,
+  startSetItems } from '../../actions/items';
 import items from '../fixtures/items';
 import database from '../../firebase/firebase';
 
@@ -19,6 +26,22 @@ test('should setup remove item action object', () => {
   expect(action).toEqual({
     type: 'REMOVE_ITEM',
     id: '123abc'
+  });
+});
+
+test('should remove item from firebase', (done) => {
+  const store = createMockStore({});
+  const id = items[2].id;
+  store.dispatch(startRemoveItem({ id })).then(() => {
+    const actions = store.getActions();
+    expect(actions[0]).toEqual({
+      type: 'REMOVE_ITEM',
+      id
+    });
+    return database.ref(`items/${id}`).once('value');
+  }).then((snapshot) => {
+    expect(snapshot.val()).toBeFalsy();
+    done();
   });
 });
 

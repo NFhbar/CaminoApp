@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { row, column } from 'reactstrap';
 import ItemForm from './ItemForm';
-import { editItem, removeItem } from '../actions/items';
+import { editItem, startRemoveItem } from '../actions/items';
 
 export class EditItemPage extends React.Component {
   onSubmit = (item) => {
@@ -10,7 +10,7 @@ export class EditItemPage extends React.Component {
     this.props.history.push('/');
   };
   onRemove = () => {
-    this.props.removeItem({ id: this.props.item.id });
+    this.props.startRemoveItem({ id: this.props.item.id });
     this.props.history.push('/');
   };
   render() {
@@ -34,7 +34,7 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = (dispatch, props) => ({
   editItem: (id, item) => dispatch(editItem(id, item)),
-  removeItem: (data) => dispatch(removeItem(data))
+  startRemoveItem: (data) => dispatch(startRemoveItem(data))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditItemPage);

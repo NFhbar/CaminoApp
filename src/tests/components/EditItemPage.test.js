@@ -3,16 +3,16 @@ import { shallow } from 'enzyme';
 import items from '../fixtures/items';
 import { EditItemPage } from '../../components/EditItemPage';
 
-let editItem, removeItem, history, wrapper;
+let editItem, startRemoveItem, history, wrapper;
 
 beforeEach(() => {
   editItem = jest.fn();
-  removeItem = jest.fn();
+  startRemoveItem = jest.fn();
   history = { push: jest.fn() };
   wrapper = shallow(
     <EditItemPage
       editItem={editItem}
-      removeItem={removeItem}
+      startRemoveItem={startRemoveItem}
       history={history}
       item={items[2]}
     />
@@ -29,10 +29,10 @@ test('should handle editItem', () => {
   expect(editItem).toHaveBeenLastCalledWith(items[2].id, items[2]);
 });
 
-test('should handle removeItem', () => {
+test('should handle startRemoveItem', () => {
   wrapper.find('button').simulate('click');
   expect(history.push).toHaveBeenLastCalledWith('/');
-  expect(removeItem).toHaveBeenLastCalledWith({
+  expect(startRemoveItem).toHaveBeenLastCalledWith({
     id: items[2].id
   });
 });
