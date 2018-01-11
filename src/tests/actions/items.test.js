@@ -4,6 +4,7 @@ import {
   startAddItem,
   addItem,
   editItem,
+  startEditItem,
   removeItem,
   startRemoveItem,
   setItems,
@@ -53,6 +54,24 @@ test('should setup edit item action object', () => {
     updates: {
       note: 'New note value'
     }
+  });
+});
+
+test('should edit item from firebase', (done) => {
+  const store = createMockStore({});
+  const id = items[0].id;
+  const updates = { amount: 21045 };
+  store.dispatch(startEditItem(id, updates)).then(() => {
+    const actions = store.getActions();
+    expect(actions[0]).toEqual({
+      type: 'EDIT_ITEM',
+      id,
+      updates
+    });
+    return database.ref(`items/${id}`).once('value');
+  }).then((snapshot) => {
+    expect(snapshot.val().amount).toBe(updates.amount);
+    done();
   });
 });
 

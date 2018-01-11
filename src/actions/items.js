@@ -7,6 +7,7 @@ export const addItem = (item) => ({
   item
 });
 
+// ASYNC ADD ACTION
 export const startAddItem = (itemData = {}) => {
   return (dispatch) => {
     const {
@@ -35,7 +36,7 @@ export const removeItem = ({ id } = {}) => ({
   id
 });
 
-// ASCYN ACTION
+// ASYNC REMOVE ACTION
 export const startRemoveItem = ({ id } = {}) => {
   return (dispatch) => {
     return database.ref(`items/${id}`).remove().then(() =>{
@@ -51,13 +52,22 @@ export const editItem = (id, updates) => ({
   updates
 });
 
+// ASYNC EDIT ACTION
+export const startEditItem = (id, updates) => {
+  return (dispatch) => {
+    return database.ref(`items/${id}`).update(updates).then(() => {
+      dispatch(editItem(id, updates));
+    });
+  };
+};
+
 // SET_ITEMS
 export const setItems = (items) => ({
   type: 'SET_ITEMS',
   items
 });
 
-// ASCYN ACTION
+// ASCYN SET ACTION
 export const startSetItems = () => {
   return (dispatch) => {
     return database.ref('items').once('value').then((snapshot) => {

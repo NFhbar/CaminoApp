@@ -3,15 +3,15 @@ import { shallow } from 'enzyme';
 import items from '../fixtures/items';
 import { EditItemPage } from '../../components/EditItemPage';
 
-let editItem, startRemoveItem, history, wrapper;
+let startEditItem, startRemoveItem, history, wrapper;
 
 beforeEach(() => {
-  editItem = jest.fn();
+  startEditItem = jest.fn();
   startRemoveItem = jest.fn();
   history = { push: jest.fn() };
   wrapper = shallow(
     <EditItemPage
-      editItem={editItem}
+      startEditItem={startEditItem}
       startRemoveItem={startRemoveItem}
       history={history}
       item={items[2]}
@@ -23,10 +23,10 @@ test('should render EditItemPage', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test('should handle editItem', () => {
+test('should handle startEditItem', () => {
   wrapper.find('ItemForm').prop('onSubmit')(items[2]);
   expect(history.push).toHaveBeenLastCalledWith('/');
-  expect(editItem).toHaveBeenLastCalledWith(items[2].id, items[2]);
+  expect(startEditItem).toHaveBeenLastCalledWith(items[2].id, items[2]);
 });
 
 test('should handle startRemoveItem', () => {
