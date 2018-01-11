@@ -13,30 +13,23 @@ exports[`should render About Page correctly 1`] = `
       <h1
         className="display-4"
       >
-        React-Redux Camino Financial App
+        React-Redux App
       </h1>
       <p
         className="lead"
       >
-        This App is a take-home assignment built by
+        This App is built by
         <a
           href="https://www.linkedin.com/in/nicolas-frega/"
         >
-           Nicolas Frega 
+           Nicolas Frega. 
         </a>
-        for 
-        <a
-          href="https://www.caminofinancial.com/"
-        >
-           Camino Financial 
-        </a>
-        .
       </p>
       <hr
         className="my-4"
       />
       <p>
-        The App is built with React, Redux, Bootstrap, and Chartjs. It is deployed using Heroku. It mimics some of the behavior of a store App in which the admin can add items to sell at a given price. Added items are randomly generated sold amounts for 4 months for displaying purposes. Items can be sorted by price or amount sold. The items are then rendered dynamically to the page.
+        The App is built with React, Redux, Bootstrap, Firebase, and Chartjs. It is deployed using Heroku. It mimics some of the behavior of a store App in which the admin can add items to sell at a given price. Added items are randomly generated sold amounts for 4 months for displaying purposes. Items can be sorted by price or amount sold. The items are then rendered dynamically to the page.
       </p>
       <p
         className="lead"

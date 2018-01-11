@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
-import { addItem } from './actions/items';
+import { startSetItems } from './actions/items';
 import { setTextFilter } from './actions/filters';
 import getVisibleItems from './selectors/items';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -19,4 +19,8 @@ const jsx = (
   </Provider>
 );
 
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+
+store.dispatch(startSetItems()).then(() => {
+  ReactDOM.render(jsx, document.getElementById('app'));
+});

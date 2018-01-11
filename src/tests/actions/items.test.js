@@ -1,10 +1,18 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { startAddItem, addItem, editItem, removeItem } from '../../actions/items';
+import { startAddItem, addItem, editItem, removeItem, setItems, startSetItems } from '../../actions/items';
 import items from '../fixtures/items';
 import database from '../../firebase/firebase';
 
 const createMockStore = configureMockStore([thunk]);
+
+beforeEach((done) => {
+  const itemsData = {};
+  items.forEach(({id, description, note, amount, sales, sales2, sales3, sales4 }) => {
+      itemsData[id] = { description, note, amount,sales, sales2, sales3, sales4 };
+  });
+  database.ref('items').set(itemsData).then(() => done());
+});
 
 test('should setup remove item action object', () => {
   const action = removeItem({ id: '123abc' });
@@ -86,6 +94,26 @@ test('should add item with defaults to database and store', (done) => {
     return database.ref(`items/${actions[0].item.id}`).once('value');
   }).then((snapshot) => {
     expect(snapshot.val()).toEqual(itemDataDefaults);
+    done();
+  });
+});
+
+test('should set up set item action object with data', () => {
+  const action = setItems(items);
+  expect(action).toEqual({
+    type: 'SET_ITEMS',
+    items
+  });
+});
+
+test('should fetch the items from firebase', (done) => {
+  const store = createMockStore({});
+  store.dispatch(startSetItems()).then(() => {
+    const actions = store.getActions();
+    expect(actions[0]).toEqual({
+      type: 'SET_ITEMS',
+      items
+    });
     done();
   });
 });

@@ -21,6 +21,8 @@ export default (state = itemsReducerDefaultState, action) => {
           return item;
         };
       });
+    case 'SET_ITEMS':
+      return action.items;
     default:
       return state;
   }
