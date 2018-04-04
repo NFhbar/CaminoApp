@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": "Nicolas Frega",
   "license": "MIT",
-  "homepage": "https://github.com/NFhbar/CaminoApp",
+  "homepage": "https://NFhbar.github.io/CaminoApp/",
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
