@@ -3,6 +3,8 @@
 <div>
 
 [![Build Status](https://travis-ci.org/NFhbar/CaminoApp.png?branch=master)](https://travis-ci.org/NFhbar/CaminoApp)
+[![Node version](https://img.shields.io/node/v/[NPM-MODULE-NAME].svg?style=flat)](http://nodejs.org/download/)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
 </div>
 
