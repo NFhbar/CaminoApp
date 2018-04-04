@@ -1,7 +1,9 @@
 # Camino App
 
 <div>
+
 [![Build Status](https://travis-ci.org/NFhbar/CaminoApp.png?branch=master)](https://travis-ci.org/NFhbar/CaminoApp)
+
 </div>
 
 Store Simulation App written with [React](https://reactjs.org/),
