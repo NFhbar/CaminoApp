@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1523761056741" clover="3.2.0">
+  <project timestamp="1523761056741" name="All files">
+    <metrics statements="132" coveredstatements="114" conditionals="56" coveredconditionals="43" methods="73" coveredmethods="57" elements="261" coveredelements="214" complexity="0" loc="132" ncloc="132" packages="7" files="24" classes="24">
+      <package name="actions">
+        <metrics statements="28" coveredstatements="28" conditionals="11" coveredconditionals="8" methods="20" coveredmethods="19"/>
+        <file name="filters.js" path="/home/nico/Desktop/Code/CaminoApp/src/actions/filters.js">
+          <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="2"/>
+          <line num="2" count="3" type="cond" truecount="1" falsecount="0"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="13" count="3" type="stmt"/>
+        </file>
+        <file name="items.js" path="/home/nico/Desktop/Code/CaminoApp/src/actions/items.js">
+          <metrics statements="25" coveredstatements="25" conditionals="10" coveredconditionals="7" methods="17" coveredmethods="17"/>
+          <line num="5" count="3" type="stmt"/>
+          <line num="11" count="3" type="cond" truecount="0" falsecount="1"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="24" count="2" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="34" count="3" type="cond" truecount="0" falsecount="1"/>
+          <line num="40" count="3" type="cond" truecount="0" falsecount="1"/>
+          <line num="41" count="1" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="49" count="3" type="stmt"/>
+          <line num="56" count="3" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="58" count="1" type="stmt"/>
+          <line num="59" count="1" type="stmt"/>
+          <line num="65" count="3" type="stmt"/>
+          <line num="71" count="3" type="stmt"/>
+          <line num="72" count="1" type="stmt"/>
+          <line num="73" count="1" type="stmt"/>
+          <line num="74" count="1" type="stmt"/>
+          <line num="76" count="1" type="stmt"/>
+          <line num="77" count="3" type="stmt"/>
+          <line num="83" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="components">
+        <metrics statements="67" coveredstatements="52" conditionals="24" coveredconditionals="21" methods="42" coveredmethods="27"/>
+        <file name="AboutPage.js" path="/home/nico/Desktop/Code/CaminoApp/src/components/AboutPage.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+        </file>
+        <file name="AddItemPage.js" path="/home/nico/Desktop/Code/CaminoApp/src/components/AddItemPage.js">
+          <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+        </file>
+        <file name="DashboardPage.js" path="/home/nico/Desktop/Code/CaminoApp/src/components/DashboardPage.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+        </file>
+        <file name="EditItemPage.js" path="/home/nico/Desktop/Code/CaminoApp/src/components/EditItemPage.js">
+          <metrics statements="10" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="17" count="3" type="stmt"/>
+          <line num="31" count="1" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+        </file>
+        <file name="Header.js" path="/home/nico/Desktop/Code/CaminoApp/src/components/Header.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+        </file>
+        <file name="ItemForm.js" path="/home/nico/Desktop/Code/CaminoApp/src/components/ItemForm.js">
+          <metrics statements="15" coveredstatements="15" conditionals="16" coveredconditionals="16" methods="11" coveredmethods="11"/>
+          <line num="6" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="24" count="2" type="stmt"/>
+          <line num="26" count="2" type="cond" truecount="4" falsecount="0"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="32" count="2" type="stmt"/>
+          <line num="33" count="2" type="cond" truecount="4" falsecount="0"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="45" count="13" type="stmt"/>
+        </file>
+        <file name="ItemList.js" path="/home/nico/Desktop/Code/CaminoApp/src/components/ItemList.js">
+          <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="13" count="3" type="stmt"/>
+          <line num="20" count="2" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+        </file>
+        <file name="ItemListFilters.js" path="/home/nico/Desktop/Code/CaminoApp/src/components/ItemListFilters.js">
+          <metrics statements="11" coveredstatements="6" conditionals="4" coveredconditionals="1" methods="8" coveredmethods="3"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="20" count="6" type="stmt"/>
+          <line num="44" count="2" type="stmt"/>
+          <line num="48" count="2" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+        </file>
+        <file name="ItemListItem.js" path="/home/nico/Desktop/Code/CaminoApp/src/components/ItemListItem.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="5" count="3" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+        </file>
+        <file name="ItemPlot.js" path="/home/nico/Desktop/Code/CaminoApp/src/components/ItemPlot.js">
+          <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+        </file>
+        <file name="ItemPlotItem.js" path="/home/nico/Desktop/Code/CaminoApp/src/components/ItemPlotItem.js">
+          <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+        </file>
+        <file name="NotFoundPage.js" path="/home/nico/Desktop/Code/CaminoApp/src/components/NotFoundPage.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="firebase">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="firebase.js" path="/home/nico/Desktop/Code/CaminoApp/src/firebase/firebase.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="3" type="stmt"/>
+          <line num="12" count="3" type="stmt"/>
+          <line num="14" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="reducers">
+        <metrics statements="16" coveredstatements="15" conditionals="13" coveredconditionals="12" methods="4" coveredmethods="4"/>
+        <file name="filters.js" path="/home/nico/Desktop/Code/CaminoApp/src/reducers/filters.js">
+          <metrics statements="6" coveredstatements="5" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="8" count="3" type="cond" truecount="3" falsecount="1"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+        </file>
+        <file name="items.js" path="/home/nico/Desktop/Code/CaminoApp/src/reducers/items.js">
+          <metrics statements="10" coveredstatements="10" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="5" count="7" type="cond" truecount="5" falsecount="0"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="12" count="6" type="stmt"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="15" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="21" count="5" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="selectors">
+        <metrics statements="14" coveredstatements="12" conditionals="8" coveredconditionals="2" methods="7" coveredmethods="7"/>
+        <file name="items.js" path="/home/nico/Desktop/Code/CaminoApp/src/selectors/items.js">
+          <metrics statements="7" coveredstatements="5" conditionals="8" coveredconditionals="2" methods="3" coveredmethods="3"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="6" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
+          <line num="8" count="4" type="cond" truecount="1" falsecount="1"/>
+          <line num="9" count="4" type="cond" truecount="1" falsecount="1"/>
+          <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+        </file>
+        <file name="plot-data-format.js" path="/home/nico/Desktop/Code/CaminoApp/src/selectors/plot-data-format.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="3" count="3" type="stmt"/>
+          <line num="4" count="4" type="stmt"/>
+          <line num="5" count="4" type="stmt"/>
+          <line num="6" count="4" type="stmt"/>
+          <line num="8" count="4" type="stmt"/>
+        </file>
+        <file name="plot-data.js" path="/home/nico/Desktop/Code/CaminoApp/src/selectors/plot-data.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="2" count="3" type="stmt"/>
+          <line num="3" count="4" type="stmt"/>
+        </file>
+      </package>
+      <package name="tests">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="setupTests.js" path="/home/nico/Desktop/Code/CaminoApp/src/tests/setupTests.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="4" count="18" type="stmt"/>
+          <line num="6" count="18" type="stmt"/>
+        </file>
+      </package>
+      <package name="tests.fixtures">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="filters.js" path="/home/nico/Desktop/Code/CaminoApp/src/tests/fixtures/filters.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+        </file>
+        <file name="items.js" path="/home/nico/Desktop/Code/CaminoApp/src/tests/fixtures/items.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+        <file name="plot-data.js" path="/home/nico/Desktop/Code/CaminoApp/src/tests/fixtures/plot-data.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
