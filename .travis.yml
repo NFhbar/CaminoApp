@@ -18,3 +18,4 @@ install:
   - yarn
 script:
   - yarn test
+  - yarn heroku-postbuild

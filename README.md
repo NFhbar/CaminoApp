@@ -3,6 +3,7 @@
 <div>
 
 [![Build Status](https://travis-ci.org/NFhbar/CaminoApp.png?branch=master)](https://travis-ci.org/NFhbar/CaminoApp)
+[![Coverage Status](https://coveralls.io/repos/github/NFhbar/CaminoApp/badge.svg)](https://coveralls.io/github/NFhbar/CaminoApp)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/NFhbar/CaminoApp/issues)
 
 </div>
