@@ -1,5 +1,7 @@
 # Camino App
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/NFhbar/CaminoApp.svg)](https://greenkeeper.io/)
+
 <div>
 
 [![Build Status](https://travis-ci.org/NFhbar/CaminoApp.png?branch=master)](https://travis-ci.org/NFhbar/CaminoApp)
